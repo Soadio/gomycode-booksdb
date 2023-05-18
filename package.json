@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A simple REST API to list books and authors",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon index.js"
   },
@@ -19,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/michaelhpet/gomycode-booksdb/issues"
   },
-  "homepage": "https://github.com/michaelhpet/gomycode-booksdb#readme"
+  "homepage": "https://github.com/michaelhpet/gomycode-booksdb#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.1"
+  }
 }
