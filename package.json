@@ -1,0 +1,23 @@
+{
+  "name": "booksdb",
+  "version": "1.0.0",
+  "description": "A simple REST API to list books and authors",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelhpet/gomycode-booksdb.git"
+  },
+  "keywords": [
+    "books",
+    "authors"
+  ],
+  "author": "Michael Peter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelhpet/gomycode-booksdb/issues"
+  },
+  "homepage": "https://github.com/michaelhpet/gomycode-booksdb#readme"
+}
