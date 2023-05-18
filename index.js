@@ -1,4 +1,4 @@
-import express from "express";
+import express, { response } from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
@@ -19,6 +19,15 @@ const app = express();
 
 // configure app to parse json content
 app.use(express.json());
+
+// handle GET request for books endpoint
+app.get("/books", (request, response) => {
+  response.json({
+    data: {
+      books: [],
+    },
+  });
+});
 
 // listen on PORT 5000
 app.listen(5000, () => {
