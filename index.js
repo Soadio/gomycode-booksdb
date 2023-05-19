@@ -1,6 +1,7 @@
-import express, { response } from "express";
+import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import { Book } from "./models/book.js";
 
 // configure project to use env files
 dotenv.config();
@@ -21,10 +22,22 @@ const app = express();
 app.use(express.json());
 
 // handle GET request for books endpoint
-app.get("/books", (request, response) => {
+app.get("/books", async (request, response) => {
   response.json({
     data: {
-      books: [],
+      books: await Book.find(),
+    },
+  });
+});
+
+// handle POST request to create a book
+app.post("/books", async (request, response) => {
+  const data = request.body;
+  const book = await Book.create(data);
+
+  response.json({
+    data: {
+      book,
     },
   });
 });
